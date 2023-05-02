@@ -1,0 +1,165 @@
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Staatliches', cursive;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-left: #8E9AAF;
+    --bg-right: #FFFFFF;
+    --bg-title: #CBC0D3;
+
+    --fm-title: 'Staatliches', cursive;
+    --fm-texting: 'Roboto', sans-serif;
+    --fm-footer: 'Open Sans', sans-serif;
+
+    --fc-texting: #FFFFFF;
+    --fc-footer: #4A4E69;
+
+    font-size: 62.5%; /*10px*/
+    --fs-title: 4.8rem;
+    --fs-texting: 2.4rem;
+    --fs-footer: 1.4rem;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 128rem;
+    height: 1vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 37rem;
+    height: 72rem;
+    background: var(--bg-left);
+}
+
+header img {
+    width: 21.4rem;
+    height: 16.7rem;
+    margin: 3.2rem auto;
+    
+}
+
+header h2 {
+    color: var(--fc-texting);
+    background: var(--bg-title);
+
+    font-family: var(--fm-title);
+    font-weight: 400;
+    line-height: 3.4rem;
+    font-size: var(--fs-title);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    padding: 2rem 7.2rem;
+
+}
+
+header p {
+    width: 27.5rem;
+    height: 26.2rem;
+    margin: 3.2rem auto;
+    text-align: center;
+
+    font-family: var(--fm-texting);
+    font-weight: 400;
+    line-height: 20px;
+    font-size: var(--fs-texting);
+    color: var(--fc-texting);
+}
+
+.page2{
+    margin-top: 6.4rem;
+}
+
+main {
+    display: grid;
+    grid-template-areas:"A B C"
+    "D B E"
+    "D F E";
+    gap: 3.2rem;
+}
+
+.cards {
+    position: relative;
+    justify-content: center;
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    animation: topdown 2000ms;
+}
+
+.cards img:nth-child(1) {
+    width: 22rem;
+    height: 15rem;
+    border-radius: 2rem;
+    grid-area: A;
+}
+
+.cards img:nth-child(2) {
+    width: 22rem;
+    height: 35rem;
+    border-radius: 2rem;
+    grid-area: B;
+}
+
+.cards img:nth-child(3) {
+    width: 22rem;
+    height: 15rem;
+    border-radius: 2rem;
+    grid-area: C;
+}
+
+.cards img:nth-child(4) {
+    width: 22rem;
+    height: 35rem;
+    border-radius: 2rem;
+    grid-area: D;
+}
+
+.cards img:nth-child(5) {
+    width: 22rem;
+    height: 15rem;
+    border-radius: 2rem;
+    grid-area: F;
+}
+
+.cards img:nth-child(6) {
+    width: 22rem;
+    height: 35rem;
+    border-radius: 2rem;
+    grid-area: E;
+}
+
+footer {
+    font-family: var(--fm-footer);
+    font-weight: 700;
+    font-size: var(--fs-footer);
+
+    margin: 5rem auto;
+    width: 59.1rem;
+    line-height: 28px;
+    text-align: center;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
